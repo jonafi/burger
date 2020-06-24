@@ -1,5 +1,12 @@
-var orm = require("./config/orm.js");
+const orm = require("../config/orm.js");
 
-orm.selectAll("burgers");
+var burger = {
+  selectAll: function(cb) {
+    orm.selectAll("burgers", function(res) {
+      cb(res);
+    });
+  },
 
-//to do  add the other functions, get variables from req.body
+};
+
+module.exports = burger;
