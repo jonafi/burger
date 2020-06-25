@@ -1,7 +1,9 @@
 <div class="container">
 
   <div class="text-center">
+    <h3>Eat-da-burger*</h3>
     <img class="burger-icon" src="/assets/img/burger.png" />
+    <h6>*Cook da burger first though</h6>
   </div>
 
   <hr />
@@ -9,14 +11,30 @@
   <div class="row">
     <div class="col-sm-6">
       <h3 class="heading">Redy to eat</h3>
-      <ol>
+      <ul class="list-group">
         {{#each burger}}
-        <li class="menu-item">{{burger_name}} <button type="button" class="btn btn-outline-success">EAT!</button></li>
+            {{#unless devoured}}
+        <li class="menu-item list-group-item">
+          {{id}}. {{burger_name}} 
+          <button id="{{id}}"type="button" class="eat btn btn-outline-success">
+            EAT!
+            </button>
+          </li>
+           {{/unless}}
         {{/each}}
-      </ol>
+      </ul>
     </div>
     <div class="col-sm-6">
       <h3 class="heading">DEVOURED!</h3>
+      <ul class="list-group">
+        {{#each burger}}
+            {{#if devoured}}
+        <li class="eaten list-group-item">
+          {{id}}. {{burger_name}} 
+          </li>
+           {{/if}}
+        {{/each}}
+      </ul>
     </div>
   </div>
 
@@ -32,3 +50,4 @@
   </div>
 
 </div>
+

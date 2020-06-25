@@ -8,10 +8,17 @@ body{
 
 .menu-item{
     background-color: tan;
-    margin:10px;
     padding:5px;
-    color:brown
+    color:brown;
 }
+
+.eaten{
+    background-color: darkgray;
+    padding:3px;
+    color:gray;
+    text-decoration: line-through;
+}
+
 
 ol{
     background:#d1d167;

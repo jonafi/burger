@@ -18,15 +18,12 @@ const orm = {
       });
     },
     updateOne: function(table, colName, newValue, id, cb) {
-      let queryString =
-       "UPDATE ?? SET ?? = ? WHERE id = ?;";
-  
-      connection.query(
-        queryString,
-        [table, colName, newValue, id],
-        function(err, result) {
+      let queryString ="UPDATE ?? SET ?? = ? WHERE id = ?";
+      let testQuery = mysql.format(queryString, [table, colName, newValue, id]);
+      console.log(testQuery);
+        connection.query(queryString,[table, colName, newValue, id], function(err, result) {
           if (err) throw err;
-          console.log(result);
+          //console.log(result);
           cb(result);
         }
       );

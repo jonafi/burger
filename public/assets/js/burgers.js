@@ -1,12 +1,9 @@
 $(function () {
   $(".create-form").on("submit", function (event) {
     event.preventDefault();
-
-    var newBurger = { 
+    let newBurger = { 
       name:$("#newBurger").val().trim()
     };
-
-    console.log(newBurger);
 
     $.ajax("/api/add-burger", {
       type: "POST",
@@ -14,6 +11,24 @@ $(function () {
     }).then(
       function () {
         location.reload();
+      }
+    );
+  });
+
+  $(".eat").on("click", function(event) {
+    event.preventDefault();
+    let burger_id = this.id;    
+    let eaten = {
+      id: burger_id
+    };
+
+    $.ajax("/api/eat-burger", {
+      type: "PUT",
+      data: eaten
+    })
+    .then(
+      function() {
+
       }
     );
   });

@@ -14,10 +14,15 @@ router.get("/", function(req, res) {
 router.post("/api/add-burger", function(req, res) {
   burger.insertOne( [req.body.name], function(data) {
   });
-  res.redirect('back');
-  //location.reload();
+
 });
 
+
+router.put("/api/eat-burger", function(req, res) {
+  burger.updateOne( [req.body.id], function(data) {
+  });
+ 
+});
 
 
 
