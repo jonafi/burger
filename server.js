@@ -21,20 +21,9 @@ var routes = require("./controllers/burgers_controller.js");
 app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });
 
 
-
-
- //orm.selectAll("burgers");
-
- //orm.insertOne("burgers","burger_name","Jucy Lucy");
-
-// orm.selectAll("burgers");
-
-// orm.updateOne("burgers", "burger_name", "Whopper", 3)
-
-// orm.selectAll("burgers");
