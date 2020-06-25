@@ -1,7 +1,5 @@
 var express = require("express");
-
 var PORT = process.env.PORT || 8080;
-
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -31,9 +29,9 @@ app.listen(PORT, function() {
 
 
 
-// orm.selectAll("burgers");
+ //orm.selectAll("burgers");
 
-// orm.insertOne("burgers","burger_name","Jucy Lucy");
+ //orm.insertOne("burgers","burger_name","Jucy Lucy");
 
 // orm.selectAll("burgers");
 
