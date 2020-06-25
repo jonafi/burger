@@ -104,4 +104,5 @@ dist
 .tern-port
 
 # super private raspberry pi info
-connection.js
+# JAWSDB connection info ok to share
+#connection.js
