@@ -1,0 +1,28 @@
+body{
+    background-color:#beef;
+}
+
+.burger-icon{
+    width:200px;
+}
+
+.menu-item{
+    background-color: tan;
+    margin:10px;
+    padding:5px;
+    color:brown
+}
+
+ol{
+    background:#d1d167;
+    padding:10px 20px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.btn{
+    width:100%;
+    font-size: smaller;
+}
