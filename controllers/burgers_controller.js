@@ -7,15 +7,15 @@ router.get("/", function(req, res) {
     let output = {
       burger: data
     };
-    //console.log(output);
     res.render("index", output);
   });
 });
 
 router.post("/api/add-burger", function(req, res) {
   burger.insertOne( [req.body.name], function(data) {
-//console.log(data);
   });
+  res.redirect('back');
+  //location.reload();
 });
 
 
